@@ -1,0 +1,45 @@
+
+div{
+    border: 1px solid #ffeeaa;
+    border-radius: 2vw;
+    box-sizing: border-box;
+
+}
+p{
+    font-size: xx-large;
+    font-style: italic;
+    color:brown;
+    display: none;
+
+}
+.header{
+    background-color: mediumseagreen;
+    text-align: center;
+    }
+nav{
+    background-color: darkred;
+}
+nav>ul{
+    list-style: none;
+    }
+.header ul li{
+    display: inline-block;
+    margin-left: 2vw;
+color: white;
+font-size: 3vw;
+}
+.header ul li:hover{
+    background-color: rebeccapurple;
+}
+.left,.right{
+    display: inline-block;
+}
+.left{
+    background-color: yellowgreen;
+}
+.left ul li{
+    font-size: larger;
+    }
+.left ul li:hover{
+    background-color: darkslategrey;
+}

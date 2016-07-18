@@ -1,0 +1,58 @@
+<html>
+<head>
+<title>JavaScript</title>
+<link rel="shortcut icon" href="Aha.ico">
+</head>
+<body>
+<script>
+var deg=10;var t=1;var inc=10;
+var x=0;var y=0;
+var pi=3.14;var radius=20;
+var radian=(pi*deg)/180;
+var col=getRandomColor();
+function show(){
+col=getRandomColor();
+var canvas = document.getElementById('myCanvas');
+var ctx = canvas.getContext('2d');
+radian=(pi*deg)/180;
+ctx.strokeStyle = getRandomColor();
+x=500+Math.sin(radian)*radius;
+y=300+Math.cos(radian)*radius;
+ctx.beginPath();
+ctx.arc(x,y,20,0,2*Math.PI);
+ ctx.fillStyle =col;
+ ctx.fill();
+ctx.stroke();
+deg=deg+inc;
+radius=radius+t;
+if(radius==260)
+t=-1*t;
+if(radius==0)
+t=-1*t;
+}
+
+function get(){
+var i=window.setInterval("show()",20);
+
+}
+function change(){
+inc=inc+30;
+var canvas = document.getElementById('myCanvas');
+var ctx = canvas.getContext('2d');
+ctx.clearRect(0, 0, canvas.width, canvas.height);
+}
+function getRandomColor() {
+    var letters = '0123456789ABCDEF'.split('');
+    var color = '#';
+    for (var i = 0; i < 6; i++ ) {
+        color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+}
+</script>
+
+<canvas id="myCanvas" width="1300" height="580" style="border:1px solid #d3d3d3;"></canvas>
+<button onclick="get()">OK</button>
+<button onclick="change()">OK</button>
+</body>
+</html>

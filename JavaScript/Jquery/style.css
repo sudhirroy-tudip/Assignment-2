@@ -1,0 +1,33 @@
+body{
+    position: absolute;
+}
+div{
+position: absolute ;
+    top: 50vh;
+    width: 99vw;
+    border: 2px solid rebeccapurple;
+    border-radius: 2vw;
+    box-sizing: border-box;
+    display: inline-block;
+}
+.player{
+
+    width: 3vw;
+    height: 3vw;
+    border: 2px solid black;
+    border-radius: 2vw;
+    box-sizing: border-box;
+    background-color: coral;
+    left: 5vw;
+}
+.ghost{
+    position: absolute ;
+    top: 40vh;
+    width: 2vw;
+    height: 5vw;
+    border: 2px solid darkolivegreen;
+    box-sizing: border-box;
+    background-color: red;
+    left: 90vw;
+    visibility: visible;
+}

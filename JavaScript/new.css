@@ -1,0 +1,9 @@
+
+div{display:inline-block;position: relative;width: 25%;height: 25%;
+}
+div:nth-child(even) {
+    background-color: green;
+}
+div:nth-child(odd) {
+    background-color: red;
+}

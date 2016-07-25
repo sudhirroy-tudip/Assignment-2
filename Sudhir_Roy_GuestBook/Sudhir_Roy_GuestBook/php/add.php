@@ -11,7 +11,7 @@ $postdata = file_get_contents("php://input");
         $date = $request->date;
         $intime = $request->intime;
         $contact_person = $request->contact_person;
-        $query = "insert into  add_visitor values(DEFAULT,'$name','$email','$gender','$date','$phone','$address','$contact_person','$intime')";
+        $query = "insert into  add_visitor values(DEFAULT,'$name','$email','$gender','$address','$phone','$contact_person','$date','$intime')";
 
         $comments = mysql_query($query);
          if($comments)

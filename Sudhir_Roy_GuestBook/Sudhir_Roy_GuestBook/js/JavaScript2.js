@@ -68,20 +68,17 @@ app.controller('add', function ($scope,$http,$filter,$route,$location) {
 });
 
 app.controller('view', function ($scope, $http,$location) {
-        $http.get('php/view.php').then(function (response) {
-            // here the data from the api is assigned to a variable named users
-            console.log($scope.names = response.data);
-            $scope.show = true;
-        });
-        
+    $scope.back = function () {
+        $location.url('dashboard.html');
+    };
+   $http.get('php/view.php').then(function (response) {
+         // here the data from the api is assigned to a variable named users
+         console.log($scope.names = response.data);
+         $scope.show = true;
+     });
     
-$scope.back = function () {
-    $scope.flag = false;
-    $location.url('dashboard.html');
-
-};
 });
-
+    
    app.controller('service', function ($scope,$http,$location) {
     $scope.back = function () {
         $location.url('view/dashboard.html');

@@ -1,0 +1,47 @@
+    <table class="responstable">
+  <th>ID</th>
+  <th>Name</th>
+  <th>Email</th>
+  <th>Gender</th>
+  <th>Address</th>
+  <th>Phone</th>
+  <th>Contact Person</th>
+  <th>Date</th>
+  <th>Intime</th>          
+  <th>Update</th>
+  <th>Delete</th>
+   
+    <tr ng-repeat="x in names" ng-include="getTemplate(x)">
+    
+    <script type="text/ng-template" id="display">
+    <td ng-model="id">{{x.id}}</td>
+    <td>{{ x.name}}</td>
+    <td>{{ x.email}}</td>
+    <td>{{ x.gender}}</td>
+    <td>{{ x.address}}</td>
+    <td>{{ x.phone}}</td>
+    <td>{{ x.contact_person}}</td>
+    <td>{{ x.date}}</td>
+    <td>{{ x.time}}</td>
+    <td><button ng-click="edit_visitor(x)">Edit</button></td>
+    <td><button ng-click="removeitem(x.id,$index)" class="del">Delete</button></td>
+     </script>
+    
+    <script type="text/ng-template" id="edit">
+    <td><input ng-model="x.id" type="text" readonly></td>
+    <td><input ng-model="x.name" id='cc'></td>
+    <td><input ng-model="x.email" type='email'></td>
+    <td><input ng-model="x.gender" type='text'></td>
+    <td><input ng-model="x.address" type='text'></td>
+    <td><input ng-model="x.phone" type='text'></td>
+    <td><input ng-model="x.contact_person" type='text'></td>
+    <td><input ng-model="x.date" type='date'></td>
+    <td><input ng-model="x.time" type='time'></td>
+    <td> <button ng-click="update(x)">Save</button></td>
+    <td> <button type="button" ng-click="reset(x,$index)">Cancel</button></td>
+    </tr>
+    </script>
+    
+</table>
+
+<center><input type="button" value="Back" ng-click="back()"/></center>

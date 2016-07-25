@@ -1,0 +1,41 @@
+<div class="add">
+ <div class="main">
+      <div class="one">
+        
+        <div class="register">
+           <h3>Regesiter User</h3>
+        
+           <form ng-submit="submit(1)">
+               
+              <div>
+              <label for="name">User Id</label>
+              <input type="text" ng-model="name"  placeholder="Enter user name"required/>
+            </div>
+             
+            <div>
+              <label for="email">Email:</label>
+              <input type="email" ng-model="email"  placeholder="sudhir.roy11@gmail.com"required/>
+            </div>
+			
+	        <div>
+              <label for="password">Password:</label>
+              <input type="password" ng-model="password"  placeholder="***********" required/>
+            </div>
+	
+	        <div>
+              <label for="password_c">Confirm:</label>
+              <input type="password" ng-model="password_c"  placeholder="***********"required/>
+            </div>
+	  
+            <div>
+              <input type="submit"  class="button"/>
+             <input type="button" value="Cancel" ng-click="cancel()"  class="button" />
+         
+         </div>
+          </form>
+ 	
+ 	
+ 	</div>
+    </div>
+    </div>
+    </div>

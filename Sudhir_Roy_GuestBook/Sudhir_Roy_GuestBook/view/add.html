@@ -1,0 +1,58 @@
+<div class="add">
+ <div class="main">
+      <div class="one">
+        
+        <div class="register">
+           <h3>Fill up guest Information</h3>
+           <form ng-submit="submit()">
+        
+            <div>
+              <label>Name</label>
+              <input type="text" ng-model="name" placeholder="Enter user name"required/>
+            </div>
+            
+            <div>
+              <label>Email</label>
+              <input type="email" ng-model="email" placeholder="sudhir.roy11@gmail.com" required/>
+            </div>
+			
+			<div>
+               <label>Gender</label>
+             <input type="radio" ng-model="gender" value="male" name="gender" required/> Male
+<input type="radio" ng-model="gender" value="female" name="gender" required/> Female
+            </div>
+            
+            <div>
+              <label>Address</label>
+              <input type="text" ng-model="address" placeholder="A11,Shivanjali apartment,Aundh,Pune"required/>
+            </div>
+             <div>
+              <label>Phone</label>
+              <input type="text" ng-model="phone" placeholder="9563505904etc"required/>
+            </div>
+            
+            <div>
+              <label>Contact Person</label>
+              <input type="text" ng-model="contact_person"  placeholder="tusharapshankar"required />
+            </div>
+            <div>
+              <label>Date</label>
+              <input type="date" ng-model="date" required/>
+            </div>
+            
+            <div>
+              <label>In time</label>
+              <input type="time" ng-model="intime"  placeholder="12:00 GTS" required/>
+            </div>
+            <div>
+              <input type="submit"/>
+              <input type="button" value="Cancel" ng-click="cancel()" />
+           
+         </div>
+         </form>
+ 	
+ 	
+ 	</div>
+    </div>
+    </div>
+    </div>
